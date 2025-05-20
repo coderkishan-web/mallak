@@ -1,5 +1,5 @@
 // 📁 src/App.js
-import React from 'react';
+import { useEffect } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';
 
@@ -15,14 +15,26 @@ import Awards from './pages/Awards';
 import ProductDetail from './pages/ProductDetails';
 import Footer from './components/Footer';
 import Products from './pages/Products';
+import Login from './pages/Login';
 import Productsub from './pages/Subproduct';
 import FloatingButtons from './components/FloatingButtons';
 import SmoothScroll from './components/SmoothScroll';
-
+Login
 const App = () => {
+  //   useEffect(() => {
+  //   const handleContextMenu = (e) => {
+  //     e.preventDefault();
+  //   };
+
+  //   document.addEventListener('contextmenu', handleContextMenu);
+
+  //   return () => {
+  //     document.removeEventListener('contextmenu', handleContextMenu);
+  //   };
+  // }, []);
   return (
     <div>
-      <SmoothScroll/>
+      {/* <SmoothScroll/> */}
       <Navbar />
       
       <Routes>
@@ -36,6 +48,8 @@ const App = () => {
         <Route path="/Productsub" element={<Productsub />} />
         <Route path="/products" element={<Products />} />
         <Route path="/product/:slug" element={<ProductDetail />} />
+        <Route path="/Login" element={<Login/>} />
+
       </Routes>
 
       <Footer/>

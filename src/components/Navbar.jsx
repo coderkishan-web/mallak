@@ -1,6 +1,7 @@
 // 📁 src/components/Navbar.jsx
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import GoogleTranslate from './GoogleTranslate';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -12,21 +13,42 @@ const Navbar = () => {
 
   return (
     <header className="bg-white shadow-sm relative">
-      <nav className="mx-auto flex max-w-8xl items-center justify-center flex-wrap lg:px-8" aria-label="Global">
+      <nav className=" flex max-w-8xl items-center  justify-center flex-wrap lg:px-8" aria-label="Global">
         <div className='flex justify-center items-center gap-28 px-12 mx-2 mt-2 rounded-tr-4xl rounded-tl-4xl'>
-          {/* Logo */}
+         <div className='flex justify-between gap-4 items-center '>
+   {/* Logo */}
           <div className="flex justify-center items-center lg:flex-1 md:p-6">
             <Link to="/" className="text-xl font-bold text-gray-900">
-              <img src="/src/assets/logo.png" alt="" className='w-56 md:w-72 mb-2' />
+              <img src="/src/assets/logo.png" alt="" className='w-64 mb-2' />
             </Link>
           </div>
+        {/* Mobile Menu Button */}
+        <div className="flex lg:hidden px-6">
+          <button
+            type="button"
+            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            <span className="sr-only">Open main menu</span>
+            {isMenuOpen ? (
+              <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            ) : (
+              <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            )}
+          </button>
+        </div>
+</div>
 
           {/* Desktop Nav */}
-          <div className="hidden lg:flex lg:gap-x-12">
+          <div className="hidden lg:flex lg:gap-x-8">
             {/* About Dropdown */}
             <div className="group">
               <div className="flex items-center gap-x-1 text-sm font-semibold text-gray-900 py-6 cursor-pointer">
-                <Link to="/about" className="block text-lg font-semibold text-gray-800">Our Organisation</Link>
+                <Link to="/about" className="block text-md font-semibold text-gray-800">Our Organisation</Link>
                 <svg className="w-5 h-5 text-gray-800" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M5.22 8.22a.75.75 0 011.06 0L10 11.94l3.72-3.72a.75.75 0 111.06 1.06l-4.25 4.25a.75.75 0 01-1.06 0L5.22 9.28a.75.75 0 010-1.06z" clipRule="evenodd" />
                 </svg>
@@ -41,7 +63,7 @@ const Navbar = () => {
                       <p className="text-sm">Innovating in specialty chemicals since 1998.</p>
                       </Link>
                     </a>
-                    <a href="/about/#whoweare" className="block p-4 hover:bg-gray-800 hover:text-white rounded-lg">
+                    <a href="/about" className="block p-4 hover:bg-gray-800 hover:text-white rounded-lg">
                       <h3 className="font-semibold">Vision & Mission</h3>
                       <p className="text-sm">Empowering global innovation, made in India.</p>
                     </a>
@@ -81,7 +103,7 @@ const Navbar = () => {
             {/* Product Dropdown */}
             <div className="group">
               <div className="flex items-center gap-x-1 text-sm font-semibold text-gray-900 cursor-pointer py-6">
-                <Link to="/products" className="block text-lg font-semibold text-gray-800">Business Units</Link>
+                <p  className="block text-md font-semibold text-gray-800">Business Units</p>
                 <svg className="w-5 h-5 text-gray-800" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M5.22 8.22a.75.75 0 011.06 0L10 11.94l3.72-3.72a.75.75 0 111.06 1.06l-4.25 4.25a.75.75 0 01-1.06 0L5.22 9.28a.75.75 0 010-1.06z" clipRule="evenodd" />
                 </svg>
@@ -130,36 +152,17 @@ const Navbar = () => {
             </div>
 
             {/* Static Links */}
-            <Link to="/crams" className="text-lg font-semibold text-gray-800 py-6">Cram Services</Link>
-            <Link to="/blog" className="text-lg font-semibold text-gray-800 py-6">Blogs</Link>
-            <Link to="/contact" className="text-lg font-semibold text-gray-800 py-6">Contact</Link>
+            <Link to="/crams" className="text-md font-semibold text-gray-800 py-6">Cram Services</Link>
+            <Link to="/blog" className="text-md font-semibold text-gray-800 py-6">Blogs</Link>
+            <Link to="/contact" className="text-md font-semibold text-gray-800 py-6">Contact</Link>
           </div>
         </div>
 
-        {/* Mobile Menu Button */}
-        <div className="flex lg:hidden px-6">
-          <button
-            type="button"
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            <span className="sr-only">Open main menu</span>
-            {isMenuOpen ? (
-              <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            ) : (
-              <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-            )}
-          </button>
-        </div>
 
         {/* Login Button */}
         <div className="hidden lg:flex lg:justify-center z-50">
-          <Link to="/login" className="text-lg font-semibold leading-6 text-white px-16 bg-gray-800 hover:bg-gray-900 py-4 rounded-full">Log in</Link>
-          <span aria-hidden="true" className='bg-gray-800 hover:bg-gray-900 text-white text-3xl py-2 px-4 rounded-full -rotate-45'>&rarr;</span>
+          <Link to="/login" className="text-md font-semibold leading-6 text-white px-16 bg-gray-800 hover:bg-gray-900 py-4 rounded-full">Log in</Link>
+          <span aria-hidden="true" className='bg-gray-800 hover:bg-gray-900 text-white text-2xl py-2 px-4 rounded-full -rotate-45'>&rarr;</span>
         </div>
 
        {/* Mobile Menu */}
@@ -224,6 +227,10 @@ const Navbar = () => {
 </div>
 
       </nav>
+
+      <div className='absolute top-6 md:top-14 left-0 p-4 z-50'>
+          <GoogleTranslate/>
+      </div>
     </header>
   );
 };

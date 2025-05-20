@@ -43,44 +43,42 @@ export default function TestimonialCarousel() {
     setActive((prev) => (prev === length - 1 ? 0 : prev + 1));
   };
 
-  // Utility to wrap around for left & right cards
   const getIndex = (index) => (index + length) % length;
 
   return (
-    <div className="bg-blue-50 relative rounded-xl py-12 px-8 md:px-20 select-none overflow-hidden">
-      <h2 className="text-center text-teal-800 font-semibold text-2xl mb-12">
+    <div className="bg-blue-50 relative rounded-xl py-12 px-4 sm:px-6 lg:px-20 select-none overflow-hidden">
+      <h2 className="text-center text-teal-800 font-semibold text-xl sm:text-2xl mb-10 sm:mb-12">
         What Our Clients Say About Us
       </h2>
 
-      <div className="flex justify-center items-center gap-6 relative z-10">
-        {/* Left Card */}
-        <div
-          className={`w-52 min-h-[220px] bg-white p-6 rounded-lg shadow-md flex flex-col justify-center text-gray-700 text-sm font-semibold transition-opacity duration-300`}
-        >
+      {/* Carousel Layout */}
+      <div className="flex flex-col lg:flex-row justify-center items-center gap-6 relative z-10">
+        {/* Left Card (hide on mobile) */}
+        <div className="hidden md:flex w-52 min-h-[220px] bg-white p-6 rounded-lg shadow-md flex-col justify-center text-gray-700 text-sm font-semibold transition-opacity duration-300">
           <h3 className="font-bold mb-3">{testimonials[getIndex(active - 1)].title}</h3>
           <p className="font-normal text-xs leading-tight">
             {testimonials[getIndex(active - 1)].text.slice(0, 100)}...
           </p>
         </div>
 
-        {/* Center/Main Card */}
-        <div className="w-[700px] bg-white rounded-xl shadow-lg flex overflow-hidden">
+        {/* Main Card */}
+        <div className="w-full sm:w-[90%] lg:w-[700px] bg-white rounded-xl shadow-lg flex flex-col sm:flex-row overflow-hidden">
           <img
             src={testimonials[active].image}
             alt="Client"
-            className="w-64 object-cover"
+            className="w-full sm:w-64 h-48 sm:h-auto object-cover"
           />
-          <div className="p-6 flex flex-col">
+          <div className="p-4 sm:p-6 flex flex-col">
             <span className="text-xs text-gray-500 mb-2">{testimonials[active].date}</span>
-            <h3 className="text-gray-800 font-semibold text-lg mb-3">
+            <h3 className="text-gray-800 font-semibold text-base sm:text-lg mb-3">
               {testimonials[active].title}
             </h3>
-            <p className="text-xs text-gray-700 leading-snug">{testimonials[active].text}</p>
+            <p className="text-sm text-gray-700 leading-snug">{testimonials[active].text}</p>
           </div>
         </div>
 
-        {/* Right Card */}
-        <div className="w-52 h-64 rounded-lg overflow-hidden shadow-md relative">
+        {/* Right Card (hide on mobile) */}
+        <div className="hidden md:block w-52 h-64 rounded-lg overflow-hidden shadow-md relative">
           <img
             src={testimonials[getIndex(active + 1)].image}
             alt="Client"
@@ -89,22 +87,20 @@ export default function TestimonialCarousel() {
         </div>
       </div>
 
-    
-     {/* Decorative images */}
-<img
-  src="src/assets/Ornament 80.png"
-  alt="Decorative Left"
-  className="absolute left-8 top-16 h-48 z-0"
-/>
-<img
-  src="src/assets/Ornament 81.png"
-  alt="Decorative Right"
-  className="absolute right-20 top-16 h-48 z-0"
-/>
-
+      {/* Decorative images (hidden on mobile) */}
+      <img
+        src="src/assets/Ornament 80.png"
+        alt="Decorative Left"
+        className="hidden sm:block absolute left-4 sm:left-8 top-16 h-32 sm:h-48 z-0"
+      />
+      <img
+        src="src/assets/Ornament 81.png"
+        alt="Decorative Right"
+        className="hidden sm:block absolute right-4 sm:right-20 top-16 h-32 sm:h-48 z-0"
+      />
 
       {/* Navigation */}
-      <div className="mt-10 flex justify-center items-center gap-6 select-none">
+      <div className="mt-8 sm:mt-10 flex justify-center items-center gap-6">
         <button
           onClick={prev}
           aria-label="Previous"
@@ -112,12 +108,12 @@ export default function TestimonialCarousel() {
         >
           &#8249;
         </button>
-        <div className="flex gap-4">
+        <div className="flex gap-3">
           {testimonials.map((_, i) => (
             <div
               key={i}
               onClick={() => setActive(i)}
-              className={`w-4 h-4 rounded-full cursor-pointer ${
+              className={`w-3.5 h-3.5 rounded-full cursor-pointer ${
                 active === i ? "bg-teal-800" : "bg-gray-300"
               }`}
             />

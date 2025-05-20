@@ -97,18 +97,14 @@ const Contact = () => {
     {/* img  */}
     <section className="relative w-full h-[60vh] md:h-[75vh] lg:h-[85vh] overflow-hidden">
       {/* Background Image */}
-      <img
-        src="src/assets/div.png" 
-        alt="Office Building Glass"
-        className="absolute inset-0 w-full h-full object-cover"
-      />
+          
+            <iframe className="w-full h-full absolute inset-0  object-cover" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3767.781888026011!2d72.96792317520858!3d19.204726582026566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b93e180af03b%3A0xe6724e678c1117b7!2sPunjani%20Industrial%20Estate%2C%20Khopat%20Rd%2C%20Hans%20Nagar%2C%20Thane%20West%2C%20Thane%2C%20Maharashtra%20400601!5e0!3m2!1sen!2sin!4v1737726238157!5m2!1sen!2sin"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          
 
-      {/* Overlay (Optional for brightness control) */}
-      <div className="absolute inset-0 bg-white/20 backdrop-brightness-95"></div>
 
       {/* Large Text */}
       <div className="absolute bottom-8 left-6 md:left-12 lg:left-16">
-        <h1 className="text-[64px] md:text-[100px] lg:text-[150px] xl:text-[140px] font-extrabold text-[#3F00FF] leading-none tracking-tight">
+        <h1 className="text-[64px] md:text-[100px] lg:text-[150px] xl:text-[140px] font-extrabold text-[#2d00b3] leading-none tracking-tight">
           contact
         </h1>
       </div>
@@ -191,6 +187,97 @@ const Contact = () => {
           </button>
         </div>
       </form>
+    </section>
+       <section className="py-16 px-6 md:px-12 mx-32 text-[#120E37]">
+      <div className="container mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center md:text-left">
+
+          {/* Registered Office */}
+          <div className="fade-in p-6 bg-white bg-opacity-10 rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+            <h3
+              className="text-lg font-bold uppercase relative pb-2"
+              onMouseEnter={(e) => e.currentTarget.querySelector('span span').style.width = '100%'}
+              onMouseLeave={(e) => e.currentTarget.querySelector('span span').style.width = '0%'}
+            >
+              Registered Office
+              <span className="block w-full h-0.5 bg-white mt-1">
+                <span className="block h-0.5 bg-[#FF9800] transition-all duration-300" style={{ width: '0%' }}></span>
+              </span>
+            </h3>
+            <p className="mt-3 font-semibold text-lg">Mallak Chemical Pvt. Ltd.</p>
+            <p className="text-sm leading-relaxed text-gray-500">
+              Unit – 320, Mahavir Industrial Estate<br />
+              Plot – 32, Off. Mahakali Caves Road<br />
+              Andheri (E), Mumbai 400 093<br />
+              Maharashtra, India
+            </p>
+          </div>
+
+          {/* Factory-1 */}
+          <div className="fade-in p-6 bg-white bg-opacity-10 rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+            <h3
+              className="text-lg font-bold uppercase relative pb-2"
+              onMouseEnter={(e) => e.currentTarget.querySelector('span span').style.width = '100%'}
+              onMouseLeave={(e) => e.currentTarget.querySelector('span span').style.width = '0%'}
+            >
+              Factory-1
+              <span className="block w-full h-0.5 bg-white mt-1">
+                <span className="block h-0.5 bg-[#FF9800] transition-all duration-300" style={{ width: '0%' }}></span>
+              </span>
+            </h3>
+            <p className="mt-3 font-semibold text-lg">Mallak Chemical Pvt. Ltd.</p>
+            <p className="text-sm leading-relaxed text-gray-500">
+              MIDC, Mahad,<br />
+              Dist: Raigad-402301<br />
+              Maharashtra, India
+            </p>
+          </div>
+
+          {/* Factory-2 */}
+          <div className="fade-in p-6 bg-white bg-opacity-10 rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+            <h3
+              className="text-lg font-bold uppercase relative pb-2"
+              onMouseEnter={(e) => e.currentTarget.querySelector('span span').style.width = '100%'}
+              onMouseLeave={(e) => e.currentTarget.querySelector('span span').style.width = '0%'}
+            >
+              Factory-2
+              <span className="block w-full h-0.5 bg-white mt-1">
+                <span className="block h-0.5 bg-[#FF9800] transition-all duration-300" style={{ width: '0%' }}></span>
+              </span>
+            </h3>
+            <p className="mt-3 font-semibold text-lg">Mallak Chemical Pvt. Ltd.</p>
+            <p className="text-sm leading-relaxed text-gray-500">
+              Plot no: C-374,<br />
+              Saykha Industrial Estate,<br />
+              Village Aragama, GIDC,<br />
+              Tal: Vagra, Dist: Bharuch-392140<br />
+              Gujarat, India
+            </p>
+          </div>
+
+          {/* Others */}
+          <div className="fade-in p-6 bg-white bg-opacity-10 rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+            <h3
+              className="text-lg font-bold uppercase relative pb-2"
+              onMouseEnter={(e) => e.currentTarget.querySelector('span span').style.width = '100%'}
+              onMouseLeave={(e) => e.currentTarget.querySelector('span span').style.width = '0%'}
+            >
+              Others
+              <span className="block w-full h-0.5 bg-white mt-1">
+                <span className="block h-0.5 bg-[#FF9800] transition-all duration-300" style={{ width: '0%' }}></span>
+              </span>
+            </h3>
+            <p className="mt-3 font-semibold text-lg">China</p>
+            <p className="text-sm leading-relaxed text-gray-500">
+              Room 40-5-101, Xuriwan Park,<br />
+              Tangjia town, Zhuhai City,<br />
+              Guangdong Province, China<br />
+              Postcode: 519080
+            </p>
+          </div>
+
+        </div>
+      </div>
     </section>
   </>
   );
