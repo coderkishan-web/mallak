@@ -1,0 +1,184 @@
+[
+  {
+    "category": "Pigments & Colorants",
+    "description": null,
+    "subproducts": [
+      "Pigment By Color",
+      "Pigment By Industry",
+      "Pigment by Chemistry",
+      "Pigment by CAS Number"
+    ],
+    "products": [
+      {
+        "id": 1,
+        "tone": "",
+        "name": "Pigment Violet 3",
+        "code": "Syaahee V 0031D1",
+        "chemistry": "Fanal Pigments/Violet",
+        "cas": "1325-82-2",
+        "categoryColor": "Violet"
+      },
+      {
+        "id": 2,
+        "tone": "",
+        "name": "Pigment Violet 4",
+        "code": "Syaahee V 0031D1",
+        "chemistry": "Fanal Pigments/kishan",
+        "cas": "1325-82-2",
+        "categoryColor": "Violet"
+      },
+      {
+        "id": 22,
+        "tone": "",
+        "name": "Pigment Violet 4",
+        "code": "Syaahee V 0031D1",
+        "chemistry": "Fanal Pigments/kishan",
+        "cas": "1325-82-2",
+        "categoryColor": "Violet"
+      },
+      {
+        "id": 3,
+        "tone": "",
+        "name": "Pigment Violet 3",
+        "code": "Syaahee V 0031D1",
+        "chemistry": "Fanal Pigments/Violet",
+        "cas": "1325-82-2",
+        "categoryColor": "Violet"
+      },
+      {
+        "id": 4,
+        "tone": "",
+        "name": "Pigment Blue 5",
+        "code": "Syaahee B 1234A5",
+        "chemistry": "Fanal Pigments/prachiti",
+        "cas": "1234-56-7",
+        "categoryColor": "Blue"
+      },
+      {
+        "id": 5,
+        "tone": "",
+        "name": "Pigment Green 2",
+        "code": "Syaahee G 8765B2",
+        "chemistry": "Fanal Pigments/Green",
+        "cas": "4321-65-4",
+        "categoryColor": "Green"
+      }
+    ]
+  },
+  {
+    "category": "Chemical and Pharma Intermediate",
+    "description": "Key ingredients for pharma and specialty chemicals.",
+    "subproducts": [
+      "Pigment By Industry",
+      "Pigment by Chemistry",
+      "Pigment by CAS Number"
+    ],
+    "products": [
+      {
+        "id": 101,
+        "tone": "",
+        "name": "Pharma Intermediate A",
+        "code": "Chem PI A001",
+        "chemistry": "Chemical Intermediate",
+        "cas": "1111-22-3",
+        "categoryColor": "Clear"
+      },
+      {
+        "id": 102,
+        "tone": "",
+        "name": "Pharma Intermediate B",
+        "code": "Chem PI B002",
+        "chemistry": "Specialty Chemical",
+        "cas": "2222-33-4",
+        "categoryColor": "Clear"
+      }
+    ]
+  },
+  {
+    "category": "Surfactants",
+    "description": "Advanced surfactants for diverse industrial uses.",
+    "subproducts": [
+      "Pigment By Industry",
+      "Pigment by Chemistry",
+      "Pigment by CAS Number"
+    ],
+    "products": [
+      {
+        "id": 201,
+        "tone": "",
+        "name": "Surfactant X",
+        "code": "Surf X100",
+        "chemistry": "Nonionic Surfactant",
+        "cas": "3333-44-5",
+        "categoryColor": "White"
+      },
+      {
+        "id": 202,
+        "tone": "",
+        "name": "Surfactant Y",
+        "code": "Surf Y200",
+        "chemistry": "Anionic Surfactant",
+        "cas": "4444-55-6",
+        "categoryColor": "White"
+      }
+    ]
+  },
+  {
+    "category": "Metal Powder for 3D Printing",
+    "description": "High-performance metal powders for additive manufacturing.",
+    "subproducts": [
+      "Pigment By Industry",
+      "Pigment by Chemistry",
+      "Pigment by CAS Number"
+    ],
+    "products": [
+      {
+        "id": 301,
+        "tone": "",
+        "name": "Metal Powder Titanium",
+        "code": "Metal TP001",
+        "chemistry": "Titanium Powder",
+        "cas": "5555-66-7",
+        "categoryColor": "Silver"
+      },
+      {
+        "id": 302,
+        "tone": "",
+        "name": "Metal Powder Aluminum",
+        "code": "Metal AP002",
+        "chemistry": "Aluminum Powder",
+        "cas": "6666-77-8",
+        "categoryColor": "Silver"
+      }
+    ]
+  },
+  {
+    "category": "Ionic Liquids",
+    "description": "Eco-friendly solvents for modern chemical processes.",
+    "subproducts": [
+      "Pigment By Industry",
+      "Pigment by Chemistry",
+      "Pigment by CAS Number"
+    ],
+    "products": [
+      {
+        "id": 401,
+        "tone": "",
+        "name": "Ionic Liquid A",
+        "code": "IL A101",
+        "chemistry": "Imidazolium-based",
+        "cas": "7777-88-9",
+        "categoryColor": "Clear"
+      },
+      {
+        "id": 402,
+        "tone": "",
+        "name": "Ionic Liquid B",
+        "code": "IL B202",
+        "chemistry": "Pyridinium-based",
+        "cas": "8888-99-0",
+        "categoryColor": "Clear"
+      }
+    ]
+  }
+]

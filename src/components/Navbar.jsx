@@ -1,8 +1,8 @@
 // 📁 src/components/Navbar.jsx
-import React, { useState } from 'react';
+import React, { useState, useContext } from "react";
 import { Link } from 'react-router-dom';
 import GoogleTranslate from './GoogleTranslate';
-
+import { ProductContext } from '../context/ProductContext'; 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null); // For mobile dropdowns
@@ -10,6 +10,11 @@ const Navbar = () => {
   const toggleDropdown = (name) => {
     setOpenDropdown(openDropdown === name ? null : name);
   };
+    const { products } = useContext(ProductContext);
+ const col1 = products.slice(0, 1);
+  const col2 = products.slice(1, 3);
+  const col3 = products.slice(3);
+ const categories = [...new Set(products.map(p => p.category))];
 
   return (
     <header className="bg-white shadow-sm  sticky top-0 left-0 right-0 z-50 py-5 md:py-0">
@@ -111,41 +116,63 @@ const Navbar = () => {
               <div className="absolute left-0 top-24 w-screen hidden group-hover:block z-40">
                 <div className="bg-white shadow-lg ring-1 ring-gray-200">
                   <div className="mx-auto max-w-7xl grid grid-cols-3 gap-6 p-6">
-                    <div className="border border-gray-200 rounded-xl p-6">
-                      <Link to="/products" className="block p-4 hover:bg-gray-800 hover:text-white rounded-lg">
-                        <h3 className="font-semibold">Pigments & Colorants</h3>
-                        <p className="text-sm">Metal Finishing Chemicals</p>
-                        <p className="text-sm">Construction Chemicals</p>
-                        <p className="text-sm">Pharma</p>
-                        <p className="text-sm">Paint, Coating, Inks and Pigments</p>
-                        <p className="text-sm">Oil & Gas</p>
-                        <p className="text-sm">Industrial and Household</p>
-                      </Link>
-                    </div>
-                    <div className="border border-gray-200 rounded-xl p-6">
-                      <div className="border border-gray-200 rounded-xl">
-                        <a href="#" className="block p-4 hover:bg-gray-800 hover:text-white rounded-lg">
-                          <h3 className="font-semibold">Chemical and Pharma Intermediate</h3>
-                          <p className="text-sm">Key ingredients for pharma and specialty chemicals.</p>
-                        </a>
-                      </div>
-                      <div className="border border-gray-200 rounded-xl mt-2">
-                        <a href="#" className="block p-4 hover:bg-gray-800 hover:text-white rounded-lg">
-                          <h3 className="font-semibold">Surfactants</h3>
-                          <p className="text-sm">Advanced surfactants for diverse industrial uses.</p>
-                        </a>
-                      </div>
-                    </div>
-                    <div className="border border-gray-200 rounded-xl p-6">
-                      <a href="#" className="block p-4 hover:bg-gray-800 hover:text-white rounded-lg">
-                        <h3 className="font-semibold">Metal Powder for 3D Printing</h3>
-                        <p className="text-sm">High-performance metal powders for additive manufacturing.</p>
-                      </a>
-                      <a href="#" className="block p-4 hover:bg-gray-800 hover:text-white rounded-lg">
-                        <h3 className="font-semibold">Ionic Liquids</h3>
-                        <p className="text-sm">Eco-friendly solvents for modern chemical processes.</p>
-                      </a>
-                    </div>
+                   <div className="border border-gray-200 rounded-xl p-6">
+  {col1.map((unit, idx) => (
+    <div key={idx} className="mb-6 hover:bg-gray-800 hover:text-white rounded-lg p-4">
+      <Link to={`/products/${encodeURIComponent(unit.category)}`}>
+        <h3 className="text-lg font-bold mb-2 hover:underline">{unit.category}</h3>
+      {/* <p className="text-sm mb-3">{unit.description}</p> */}
+      <ul className="text-sm space-y-1">
+        {unit.subproducts.map((sub, i) => (
+          <li key={i}>
+            <a href="#">{sub}</a>
+          </li>
+        ))}
+      </ul>
+      </Link>
+
+    </div>
+  ))}
+</div>
+
+                    <div className="border border-gray-200 rounded-xl p-6 gap-4">
+  <div className="border border-gray-200 rounded-xl mt-2 flex flex-col justify-center gap-4">
+    {col2.map((unit, idx) => (
+      <div key={idx} className="hover:bg-gray-800 hover:text-white rounded-lg p-4">
+        <Link to={`/products/${encodeURIComponent(unit.category)}`}>
+          <h3 className="text-lg font-bold mb-2 hover:underline">{unit.category}</h3>
+        {/* <p className="text-sm mb-3">{unit.description}</p> */}
+        <ul className="text-sm space-y-1">
+          {unit.subproducts.map((sub, i) => (
+            <li key={i}>
+              <a href="#">{sub}</a>
+            </li>
+          ))}
+        </ul>
+          </Link>
+      </div>
+    ))}
+  </div>
+</div>
+
+                 <div className="border border-gray-200 rounded-xl p-6">
+  {col3.map((unit, idx) => (
+    <div key={idx} className="mb-6 hover:bg-gray-800 hover:text-white rounded-lg p-4">
+      <Link to={`/products/${encodeURIComponent(unit.category)}`}>
+        <h3 className="text-lg font-bold mb-2 hover:underline">{unit.category}</h3>
+      {/* <p className="text-sm mb-3">{unit.description}</p> */}
+      <ul className="text-sm space-y-1">
+        {unit.subproducts.map((sub, i) => (
+          <li key={i}>
+            <a href="#">{sub}</a>
+          </li>
+        ))}
+      </ul>
+        </Link>
+    </div>
+  ))}
+</div>
+
                   </div>
                 </div>
               </div>

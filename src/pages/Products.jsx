@@ -1,8 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import { useParams } from 'react-router-dom';
 import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
 import ProductTable from '../components/ProductTable';
+import { ProductContext } from '../context/ProductContext';
 
 function Products() {
+  const { categoryName } = useParams();
+  const { products } = useContext(ProductContext);
+
   const textButtons = [
     'Introduction',
     'Product Details',
@@ -18,13 +23,89 @@ function Products() {
   const [isProductDetailsOpen, setProductDetailsOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
 
-  const subProducts = [
-    'Pigment By Color',
-    'Pigment By Industry',
-    'Pigment by Chemistry',
-    'Pigment by CAS Number',
+  // This is your category-subproducts JSON from your request
+  const categorySubproductsData = [
+    {
+      category: 'Pigments & Colorants',
+      description: null,
+      subproducts: [
+        'Pigment By Color',
+        'Pigment By Industry',
+        'Pigment by Chemistry',
+        'Pigment by CAS Number',
+      ],
+    },
+    {
+      category: 'Chemical and Pharma Intermediate',
+      description: 'Key ingredients for pharma and specialty chemicals.',
+      subproducts: ['Pigment by Chemistry', 'Pigment by CAS Number'],
+    },
+    {
+      category: 'Surfactants',
+      description: 'Advanced surfactants for diverse industrial uses.',
+      subproducts: ['Pigment by Chemistry', 'Pigment by CAS Number'],
+    },
+    {
+      category: 'Metal Powder for 3D Printing',
+      description: 'High-performance metal powders for additive manufacturing.',
+      subproducts: ['Pigment by Chemistry', 'Pigment by CAS Number'],
+    },
+    {
+      category: 'Ionic Liquids',
+      description: 'Eco-friendly solvents for modern chemical processes.',
+      subproducts: ['Pigment by Chemistry', 'Pigment by CAS Number'],
+    },
   ];
 
+  // Find subproducts for current category, fallback to empty array
+  const currentCategoryObj =
+    categorySubproductsData.find(
+      (cat) =>
+        cat.category.toLowerCase() === categoryName.toLowerCase() ||
+        cat.category.toLowerCase().includes(categoryName.toLowerCase())
+    ) || { subproducts: [], description: null };
+
+  const subproducts = currentCategoryObj.subproducts || [];
+
+  const categoryProducts = products.filter(
+    (product) =>
+      product.category.toLowerCase() === categoryName.toLowerCase() ||
+      product.category.toLowerCase().includes(categoryName.toLowerCase())
+  );
+
+  if (categoryProducts.length === 0) {
+    return (
+      <div className="p-10 text-center text-gray-600">
+        <h2 className="text-2xl font-bold">No products found in this category.</h2>
+      </div>
+    );
+  }
+
+  const handleTabClick = (tab) => {
+    if (tab === 'Product Details') {
+      if (subproducts.length > 0) {
+        setActiveTab(subproducts[0]); // default to first subproduct
+      } else {
+        setActiveTab('Product Details');
+      }
+      setProductDetailsOpen(false);
+    } else {
+      setActiveTab(tab);
+      setProductDetailsOpen(false);
+    }
+  };
+
+  const handleSubProductClick = (sub) => {
+    setActiveTab(sub);
+    setProductDetailsOpen(false);
+  };
+
+  const isDropdown = (text) => text === 'Product Details';
+
+  const isActive = (text) =>
+    activeTab === text || (isDropdown('Product Details') && subproducts.includes(activeTab));
+
+  // Dummy CAS data for search example
   const dummyCasData = [
     { name: 'Red Pigment A', cas: '123-45-6' },
     { name: 'Blue Pigment B', cas: '234-56-7' },
@@ -35,38 +116,30 @@ function Products() {
     product.cas.includes(searchQuery.trim())
   );
 
-  const handleTabClick = (tab) => {
-    if (tab === 'Product Details') {
-      // Ignore toggle on click — dropdown opens on hover only now
-      setActiveTab('Pigment By Color'); // Default sub tab
-    } else {
-      setActiveTab(tab);
-      setProductDetailsOpen(false);
-    }
-  };
-
-  const handleSubProductClick = (sub) => {
-    setActiveTab(sub);
-    setProductDetailsOpen(false); // Close dropdown after selecting sub product
-  };
-
-  // Open dropdown on hover
-  const handleMouseEnter = () => setProductDetailsOpen(true);
-  // Close dropdown on mouse leave
-  const handleMouseLeave = () => setProductDetailsOpen(false);
-
+  // Content rendering for subproducts in Product Details tab
   const subProductContent = {
-    'Pigment By Color': <ProductTable />, // default visible in Product Details
+    'Pigment By Color': <ProductTable products={categoryProducts}  />,
     'Pigment By Industry': (
       <div>
         <h2 className="text-2xl font-bold mb-4">Pigment By Industry</h2>
-        <p>Details and data specific to Industry-based pigments.</p>
+        <ul className="list-disc list-inside">
+          {categoryProducts.map((product, idx) => (
+            <li key={idx}>
+              <strong>{product.name}</strong>:{' '}
+              {product.subproducts?.length > 0
+                ? product.subproducts
+                    .map((sub) => (typeof sub === 'string' ? sub : sub.name || JSON.stringify(sub)))
+                    .join(', ')
+                : 'No subproducts available'}
+            </li>
+          ))}
+        </ul>
       </div>
     ),
     'Pigment by Chemistry': (
       <div>
         <h2 className="text-2xl font-bold mb-4">Pigment by Chemistry</h2>
-        <p>Details and data specific to chemical composition of pigments.</p>
+        <p>Details specific to chemistry of the pigments.</p>
       </div>
     ),
     'Pigment by CAS Number': (
@@ -103,15 +176,14 @@ function Products() {
       {/* Banner */}
       <div className="relative rounded-b-[40px] overflow-hidden shadow-md">
         <img
-          src="assets/orange.jpg"
+          src="/assets/orange.jpg"
           alt="Banner"
           className="w-full h-[300px] object-cover"
         />
         <div className="absolute inset-0 bg-black/60 flex flex-col justify-center px-6 sm:px-12 lg:px-24 text-white">
-          <h1 className="text-4xl md:text-5xl font-bold mb-2">Products</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-2">{categoryName}</h1>
           <p className="text-base md:text-lg max-w-2xl leading-relaxed">
-            Lorem ipsum is a dummy or placeholder text commonly used in graphic design,
-            publishing, and web development.
+            Details and insights about the category: {categoryName}
           </p>
         </div>
       </div>
@@ -119,33 +191,29 @@ function Products() {
       {/* Tabs */}
       <div className="flex flex-wrap justify-center gap-4 px-4 py-10 relative">
         {textButtons.map((text) => {
-          const isActive =
-            activeTab === text || (text === 'Product Details' && subProducts.includes(activeTab));
-          const isDropdown = text === 'Product Details';
-
-          if (isDropdown) {
+          if (isDropdown(text)) {
             return (
               <div
                 key={text}
                 className="relative"
-                onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave}
+                onMouseEnter={() => setProductDetailsOpen(true)}
+                onMouseLeave={() => setProductDetailsOpen(false)}
               >
                 <button
                   className={`flex items-center gap-2 px-6 py-3 rounded-full font-medium text-sm shadow-sm transition-all duration-200
-                    ${isActive ? 'bg-black text-white' : 'bg-gray-100 text-black hover:bg-gray-200'}`}
+                    ${isActive(text) ? 'bg-black text-white' : 'bg-gray-100 text-black hover:bg-gray-200'}`}
                 >
                   {text}
-                  {isProductDetailsOpen ? (
-                    <FaChevronUp className="text-xs" />
-                  ) : (
-                    <FaChevronDown className="text-xs" />
-                  )}
+                  <FaChevronDown
+                    className={`transition-transform duration-200 ${
+                      isProductDetailsOpen ? 'rotate-180' : ''
+                    }`}
+                  />
                 </button>
 
-                {isProductDetailsOpen && (
-                  <ul className="absolute top-8 left-0 mt-2 w-full bg-white border border-gray-300 rounded-md shadow-lg z-10">
-                    {subProducts.map((sub) => (
+                {isProductDetailsOpen && subproducts.length > 0 && (
+                  <ul className="absolute top-10 left-0 mt-2 bg-white border border-gray-300 rounded-md shadow-lg z-10 w-max min-w-[180px]">
+                    {subproducts.map((sub) => (
                       <li
                         key={sub}
                         onClick={() => handleSubProductClick(sub)}
@@ -160,18 +228,18 @@ function Products() {
                 )}
               </div>
             );
-          } else {
-            return (
-              <button
-                key={text}
-                onClick={() => handleTabClick(text)}
-                className={`flex items-center gap-2 px-6 py-3 rounded-full font-medium text-sm shadow-sm transition-all duration-200
-                  ${isActive ? 'bg-black text-white' : 'bg-gray-100 text-black hover:bg-gray-200'}`}
-              >
-                {text}
-              </button>
-            );
           }
+
+          return (
+            <button
+              key={text}
+              onClick={() => handleTabClick(text)}
+              className={`flex items-center gap-2 px-6 py-3 rounded-full font-medium text-sm shadow-sm transition-all duration-200
+                ${isActive(text) ? 'bg-black text-white' : 'bg-gray-100 text-black hover:bg-gray-200'}`}
+            >
+              {text}
+            </button>
+          );
         })}
       </div>
 
@@ -188,7 +256,13 @@ function Products() {
         ) : (
           <div>
             <h2 className="text-2xl font-bold mb-4">{activeTab}</h2>
-            <p>Content for {activeTab} tab goes here.</p>
+            <ul className="list-disc list-inside space-y-1">
+              {categoryProducts.map((product, i) => (
+                <li key={i}>
+                  <strong>{product.category}</strong>: {product.description || 'No description available.'}
+                </li>
+              ))}
+            </ul>
           </div>
         )}
       </div>

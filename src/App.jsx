@@ -12,7 +12,6 @@ import CareerAtMallak from './pages/CareerAtMallak';
 import Contact from './pages/Contact';
 import Awards from './pages/Awards';
 
-import ProductDetail from './pages/ProductDetails';
 import Footer from './components/Footer';
 import Products from './pages/Products';
 import Login from './pages/Login';
@@ -46,8 +45,8 @@ const App = () => {
         <Route path="/contact" element={<Contact />} />
         <Route path="/awards" element={<Awards />} />
         <Route path="/Productsub" element={<Productsub />} />
-        <Route path="/products" element={<Products />} />
-        <Route path="/product/:slug" element={<ProductDetail />} />
+        {/* <Route path="/products" element={<Products />} /> */}
+           <Route path="/products/:categoryName" element={<Products />} />
         <Route path="/Login" element={<Login/>} />
 
       </Routes>

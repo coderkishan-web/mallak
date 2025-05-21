@@ -214,7 +214,7 @@ const CRAMS = () => {
 
     {/* PLAN Section */}
 <section className="bg-[#AA8FF7] py-16 px-6 sm:px-12 md:px-16 lg:px-32">
-  <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-8 sm:gap-12">
+  <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-8 sm:gap-12">
     {/* Title */}
     <div className="text-center sm:text-left flex-shrink-0 w-full sm:w-1/4">
       <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-black leading-tight">PLAN</h1>
@@ -244,7 +244,7 @@ const CRAMS = () => {
 
 {/* OPTIMIZE Section */}
 <section className="bg-[#8ff794] py-16 px-6 sm:px-12 md:px-16 lg:px-32">
-  <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-8 sm:gap-12">
+  <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-8 sm:gap-12">
     <div className="text-center sm:text-left flex-shrink-0 w-full sm:w-1/4">
       <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-black leading-tight">OPTIMIZE</h1>
     </div>
@@ -269,7 +269,7 @@ const CRAMS = () => {
 
 {/* PRODUCE Section */}
 <section className="bg-[#6260d4] py-16 px-6 sm:px-12 md:px-16 lg:px-32">
-  <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-8 sm:gap-12">
+  <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-8 sm:gap-12">
     <div className="text-center sm:text-left flex-shrink-0 w-full sm:w-1/4">
       <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-black leading-tight">PRODUCE</h1>
     </div>
