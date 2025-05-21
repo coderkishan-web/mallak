@@ -1,4 +1,4 @@
-// 📁 src/pages/Contact.jsx
+// 📁 pages/Contact.jsx
 import React from 'react';
 
 const Contact = () => {
@@ -7,7 +7,7 @@ const Contact = () => {
    {/* Banner */}
    <div className="relative rounded-b-[40px] overflow-hidden shadow-md">
         <img
-          src="src/assets/orange.jpg"
+          src="assets/orange.jpg"
           alt="Banner"
           className="w-full h-[300px] object-cover"
         />
@@ -188,7 +188,7 @@ const Contact = () => {
         </div>
       </form>
     </section>
-       <section className="py-16 px-6 md:px-12 mx-32 text-[#120E37]">
+       <section className="py-16 px-6 md:px-12 md:mx-32 text-[#120E37]">
       <div className="container mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center md:text-left">
 

@@ -1,4 +1,4 @@
-// 📁 src/pages/About.jsx
+// 📁 pages/About.jsx
 import React from 'react';
 import WhoWeAre from '../components/Whoweare';
 import ClientsSection from '../components/ClientsSection';
@@ -8,25 +8,25 @@ const reasons = [
   {
     title: 'Global Reach',
     desc: 'Trusted by industries worldwide.',
-    icon: 'src/assets/Clip path frame-1.png', // replace with your actual path
+    icon: 'assets/Clip path frame-1.png', // replace with your actual path
     color: 'bg-teal-600',
   },
   {
     title: 'High-Quality Standards',
     desc: 'Adhering to international quality and safety norms.',
-    icon: 'src/assets/Clip path frame-2.png',
+    icon: 'assets/Clip path frame-2.png',
     color: 'bg-blue-900',
   },
   {
     title: 'Custom Solutions',
     desc: 'Tailored chemical formulations to meet client-specific needs',
-    icon: 'src/assets/Clip path frame-3.png',
+    icon: 'assets/Clip path frame-3.png',
     color: 'bg-purple-800',
   },
   {
     title: 'Eco-Friendly Manufacturing',
     desc: 'Sustainable processes that minimize waste and pollution.',
-    icon: 'src/assets/yy.png',
+    icon: 'assets/yy.png',
     color: 'bg-red-700',
   },
 ];
@@ -36,7 +36,7 @@ const About = () => {
     {/* Banner */}
     <div className="relative rounded-b-[40px] overflow-hidden shadow-md">
         <img
-          src="src/assets/orange.jpg"
+          src="assets/orange.jpg"
           alt="Banner"
           className="w-full h-[300px] object-cover"
         />
@@ -67,7 +67,7 @@ const About = () => {
     {reasons.map((reason, index) => (
       <div
         key={index}
-        className="relative flex flex-col items-center w-60 sm:w-[220px] py-16 sm:py-10"
+        className="relative flex flex-col items-center w-60 sm:w-[200px] py-0 md:py-16 "
       >
         {/* Rotated diamond */}
         <div className="relative w-28 sm:w-32 h-28 sm:h-32">
@@ -95,7 +95,7 @@ const About = () => {
         {/* Arrows between cards — only on xl screens */}
         {index !== reasons.length - 1 && (
           <div className="absolute right-[-40px] top-28 sm:top-32 hidden xl:block">
-            <img src="/src/assets/Clip path group.png" alt="arrow" className="w-16 sm:w-18" />
+            <img src="/assets/Clip path group.png" alt="arrow" className="w-16 sm:w-18" />
           </div>
         )}
       </div>

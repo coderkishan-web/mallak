@@ -103,7 +103,7 @@ function Products() {
       {/* Banner */}
       <div className="relative rounded-b-[40px] overflow-hidden shadow-md">
         <img
-          src="src/assets/orange.jpg"
+          src="assets/orange.jpg"
           alt="Banner"
           className="w-full h-[300px] object-cover"
         />

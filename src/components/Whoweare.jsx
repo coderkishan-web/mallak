@@ -52,7 +52,7 @@ const WhoWeAre = () => {
         muted
         playsInline
       >
-        <source src="src/assets/WhatsApp Video 2025-05-19 at 1.35.48 PM.mp4" type="video/mp4" />
+        <source src="assets/WhatsApp Video 2025-05-19 at 1.35.48 PM.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 

@@ -12,14 +12,14 @@ const Navbar = () => {
   };
 
   return (
-    <header className="bg-white shadow-sm relative">
+    <header className="bg-white shadow-sm  sticky top-0 left-0 right-0 z-50 py-5 md:py-0">
       <nav className=" flex max-w-8xl items-center  justify-center flex-wrap lg:px-8" aria-label="Global">
         <div className='flex justify-center items-center gap-28 px-12 mx-2 mt-2 rounded-tr-4xl rounded-tl-4xl'>
          <div className='flex justify-between gap-4 items-center '>
    {/* Logo */}
           <div className="flex justify-center items-center lg:flex-1 md:p-6">
             <Link to="/" className="text-xl font-bold text-gray-900">
-              <img src="/src/assets/logo.png" alt="" className='w-64 mb-2' />
+              <img src="assets/logo.png" alt="" className='md:w-64 w-96 mb-2' />
             </Link>
           </div>
         {/* Mobile Menu Button */}
@@ -166,8 +166,8 @@ const Navbar = () => {
         </div>
 
        {/* Mobile Menu */}
-<div className={`w-full lg:hidden bg-white ${isMenuOpen ? "block" : "hidden"}`}>
-  <div className="space-y-4 px-6 pb-6 pt-4">
+<div className={`w-full lg:hidden pt-12 bg-white ${isMenuOpen ? "block" : "hidden"}`}>
+  <div className="space-y-8 px-6 pb-6 pt-4">
     
     {/* Our Organisation */}
     <div
@@ -228,7 +228,7 @@ const Navbar = () => {
 
       </nav>
 
-      <div className='absolute top-6 md:top-14 left-0 p-4 z-50'>
+      <div className='absolute top-14 left-0 p-4 z-50'>
           <GoogleTranslate/>
       </div>
     </header>

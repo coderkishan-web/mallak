@@ -1,4 +1,4 @@
-// 📁 src/pages/Awards.jsx
+// 📁 pages/Awards.jsx
 import React from 'react';
 
 const Awards = () => {
@@ -18,7 +18,7 @@ const Awards = () => {
      {/* Banner */}
      <div className="relative rounded-b-[40px] overflow-hidden shadow-md">
      <img
-       src="src/assets/orange.jpg"
+       src="assets/orange.jpg"
        alt="Banner"
        className="w-full h-[300px] object-cover"
      />

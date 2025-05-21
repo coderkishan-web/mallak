@@ -137,7 +137,7 @@ const CRAMS = () => {
       {/* Banner */}
       <div className="relative rounded-b-[40px] overflow-hidden shadow-md">
         <img
-          src="src/assets/orange.jpg"
+          src="assets/orange.jpg"
           alt="Banner"
           className="w-full h-[300px] object-cover"
         />
@@ -204,7 +204,7 @@ const CRAMS = () => {
     className="rounded-xl overflow-hidden shadow-xl transition-all duration-700 w-full md:w-auto"
   >
     <img
-      src="src/assets/orange.jpg"
+      src="assets/orange.jpg"
       alt="Chemicals"
       className="w-full object-cover h-[300px] md:h-[400px] lg:h-[500px]"
     />
@@ -222,7 +222,7 @@ const CRAMS = () => {
 
     {/* Image */}
     <div className="w-56 sm:w-64 md:w-72 flex-shrink-0">
-      <img ref={planRef} src="src/assets/67375dc0bd3a005362c9a436_Service 1-p-500 1.png" alt="Plan Visual" className="w-full" />
+      <img ref={planRef} src="assets/67375dc0bd3a005362c9a436_Service 1-p-500 1.png" alt="Plan Visual" className="w-full" />
     </div>
 
     {/* Text & badges */}
@@ -249,7 +249,7 @@ const CRAMS = () => {
       <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-black leading-tight">OPTIMIZE</h1>
     </div>
     <div className="w-56 sm:w-64 md:w-72 flex-shrink-0">
-      <img ref={optimizeRef} src="src/assets/67375dbf641bdbb782e3f73c_Service 2-p-500 1.png" alt="Optimize Visual" className="w-full" />
+      <img ref={optimizeRef} src="assets/67375dbf641bdbb782e3f73c_Service 2-p-500 1.png" alt="Optimize Visual" className="w-full" />
     </div>
     <div className="flex-1 text-center sm:text-left">
       <p className="text-base sm:text-lg md:text-xl font-medium text-black mb-6 max-w-xl mx-auto sm:mx-0">
@@ -274,7 +274,7 @@ const CRAMS = () => {
       <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-black leading-tight">PRODUCE</h1>
     </div>
     <div className="w-56 sm:w-64 md:w-72 flex-shrink-0">
-      <img ref={produceRef} src="src/assets/673761e2253e781a3b91677b_Service 3 (1)-p-500 1.png" alt="Produce Visual" className="w-full" />
+      <img ref={produceRef} src="assets/673761e2253e781a3b91677b_Service 3 (1)-p-500 1.png" alt="Produce Visual" className="w-full" />
     </div>
     <div className="flex-1 text-center sm:text-left">
       <p className="text-base sm:text-lg md:text-xl font-medium text-black mb-6 max-w-xl mx-auto sm:mx-0">
@@ -304,7 +304,7 @@ const CRAMS = () => {
       className="flex-[2] relative overflow-hidden rounded-2xl cursor-pointer transition-all duration-500"
     >
       <img
-        src="src/assets/orange.jpg"
+        src="assets/orange.jpg"
         alt="Service 1"
         className="object-cover w-full h-full"
       />
@@ -325,7 +325,7 @@ const CRAMS = () => {
       className="flex-[1] relative overflow-hidden rounded-2xl cursor-pointer transition-all duration-500"
     >
       <img
-        src="src/assets/orange.jpg"
+        src="assets/orange.jpg"
         alt="Service 2"
         className="object-cover w-full h-full"
       />

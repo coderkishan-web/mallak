@@ -1,16 +1,16 @@
 import React from 'react';
-import bgImage from '/src/assets/Rectangle 16.png'; 
+import bgImage from '/assets/Rectangle 16.png'; 
 const clients = [
-  { src: 'src/assets/client/logosilde1.jpg', alt: 'Siegwerk' },
-    { src: 'src/assets/client/logosilde2.jpg', alt: 'Siegwerk' }, 
-     { src: 'src/assets/client/logosilde3.jpg', alt: 'Siegwerk' }, 
-      { src: 'src/assets/client/logosilde4.png', alt: 'Siegwerk' },
-        { src: 'src/assets/client/logosilde5.png', alt: 'Siegwerk' },
-   { src: 'src/assets/client/logosilde6.jpg', alt: 'Siegwerk' },
-    { src: 'src/assets/client/logosilde7.jpg', alt: 'Siegwerk' }, 
-     { src: 'src/assets/client/logosilde8.jpg', alt: 'Siegwerk' }, 
-      { src: 'src/assets/client/logosilde9.png', alt: 'Siegwerk' },
-        { src: 'src/assets/client/logosilde10.png', alt: 'Siegwerk' },
+  { src: 'assets/client/logosilde1.jpg', alt: 'Siegwerk' },
+    { src: 'assets/client/logosilde2.jpg', alt: 'Siegwerk' }, 
+     { src: 'assets/client/logosilde3.jpg', alt: 'Siegwerk' }, 
+      { src: 'assets/client/logosilde4.png', alt: 'Siegwerk' },
+        { src: 'assets/client/logosilde5.png', alt: 'Siegwerk' },
+   { src: 'assets/client/logosilde6.jpg', alt: 'Siegwerk' },
+    { src: 'assets/client/logosilde7.jpg', alt: 'Siegwerk' }, 
+     { src: 'assets/client/logosilde8.jpg', alt: 'Siegwerk' }, 
+      { src: 'assets/client/logosilde9.png', alt: 'Siegwerk' },
+        { src: 'assets/client/logosilde10.png', alt: 'Siegwerk' },
   
 ];
 

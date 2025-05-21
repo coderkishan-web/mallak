@@ -6,28 +6,28 @@ const testimonials = [
     date: "May 8, 2020",
     title: "Outstanding Experience",
     text: `Working with this team was seamless. They understood our goals and delivered a fantastic product!`,
-    image: "src/assets/Rectangle 1.png",
+    image: "assets/Rectangle 1.png",
   },
   {
     id: 2,
     date: "June 12, 2021",
     title: "Professional and Creative",
     text: `The attention to detail and creativity they bring to the table is impressive. Highly recommend!`,
-    image: "src/assets/Rectangle 1-1.png",
+    image: "assets/Rectangle 1-1.png",
   },
   {
     id: 3,
     date: "Sept 23, 2022",
     title: "Efficient and Reliable",
     text: `They met our deadlines and communicated thoroughly through the entire process. Very reliable.`,
-    image: "src/assets/Rectangle 1-1.png",
+    image: "assets/Rectangle 1-1.png",
   },
   {
     id: 4,
     date: "Feb 17, 2023",
     title: "Exceptional Support",
     text: `Their post-delivery support and availability was exceptional. We’ll be working with them again soon.`,
-    image: "src/assets/Rectangle 1.png",
+    image: "assets/Rectangle 1.png",
   },
 ];
 
@@ -89,12 +89,12 @@ export default function TestimonialCarousel() {
 
       {/* Decorative images (hidden on mobile) */}
       <img
-        src="src/assets/Ornament 80.png"
+        src="assets/Ornament 80.png"
         alt="Decorative Left"
         className="hidden sm:block absolute left-4 sm:left-8 top-16 h-32 sm:h-48 z-0"
       />
       <img
-        src="src/assets/Ornament 81.png"
+        src="assets/Ornament 81.png"
         alt="Decorative Right"
         className="hidden sm:block absolute right-4 sm:right-20 top-16 h-32 sm:h-48 z-0"
       />

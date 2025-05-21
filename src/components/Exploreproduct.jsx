@@ -3,27 +3,27 @@ import React, { useEffect, useRef, useState } from "react";
 const products = [
   {
     title: "Pigments & Colorants",
-    img: "src/assets/imgs/colors1.png",
+    img: "assets/imgs/colors1.png",
     desc: "Vibrant, durable, and high-purity pigments for coatings, plastics, inks, and textiles, ensuring superior color consistency and performance.",
   },
   {
     title: "Surfactants & Detergents",
-    img: "src/assets/imgs/11.avif",
+    img: "assets/imgs/11.avif",
     desc: "Eco-friendly and high-efficiency surfactants, emulsifiers, and wetting agents for personal care, home care, and industrial cleaning applications.",
   },
   {
     title: "Chemical & Pharmaceutical Intermediates",
-    img: "src/assets/imgs/10.jpg",
+    img: "assets/imgs/10.jpg",
     desc: "High-purity intermediates designed for pharmaceutical formulations, agrochemicals, and specialty applications, ensuring compliance with global quality standards.",
   },
   {
     title: "Ionic Liquids & Specialty Chemicals",
-    img: "src/assets/imgs/4.jpg",
+    img: "assets/imgs/4.jpg",
     desc: "Advanced ionic liquids, catalysts, and functional chemicals tailored for industrial and research-based applications.",
   },
   {
     title: "Coating & Adhesive Additives",
-    img: "src/assets/imgs/7.avif",
+    img: "assets/imgs/7.avif",
     desc: "Performance-enhancing resins, dispersions, and additives to improve adhesion, durability, and surface properties for industrial coatings.",
   },
 ];
@@ -116,12 +116,12 @@ const ExploreProducts = () => {
       <hr className="border-[#FF9800] w-40 mb-12 mx-auto" />
 
       <img
-        src="imgs/molecule9.png"
+        src="assets/imgs/molecule9.png"
         alt=""
         className="absolute top-1/2 right-0 w-32 md:w-72 opacity-10 z-10"
       />
       <img
-        src="imgs/molecule8.png"
+        src="assets/imgs/molecule8.png"
         alt=""
         className="absolute bottom-1/2 left-0 w-32 md:w-96 opacity-10"
       />

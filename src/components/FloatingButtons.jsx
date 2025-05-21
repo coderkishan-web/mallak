@@ -37,13 +37,13 @@ const FloatingButtons = () => {
         title="Chat with us on WhatsApp"
       >
         <img
-          src="src/assets/imgs/whatsapp.png"
+          src="assets/imgs/whatsapp.png"
           alt="WhatsApp"
           className="w-14 h-14 hover:scale-105 transition-transform duration-300"
         />
       </a>
     </>
   );
-};
+};  
 
 export default FloatingButtons;

@@ -10,7 +10,7 @@ export default function AuthPage() {
       {/* Banner */}
       <div className="relative rounded-b-[40px] overflow-hidden shadow-md">
         <img
-          src="src/assets/orange.jpg"
+          src="assets/orange.jpg"
           alt="Banner"
           className="w-full h-[200px] md:h-[250px] lg:h-[300px] object-cover"
         />
@@ -55,7 +55,7 @@ export default function AuthPage() {
         {/* Left Image Section (hidden on small screens) */}
         <div className="hidden lg:block w-1/2 relative overflow-hidden rounded-r-[100px]">
           <img
-            src="src/assets/unsplash_m_7p45JfXQo.png"
+            src="assets/unsplash_m_7p45JfXQo.png"
             alt="Background"
             className="object-cover w-full h-full absolute inset-0 z-0"
           />
@@ -88,7 +88,7 @@ export default function AuthPage() {
         {/* Right Content */}
         <div className="w-full lg:w-1/2 flex flex-col items-center justify-center px-6 sm:px-10 md:px-12 bg-gray-50">
           <img
-            src="src/assets/logo.png"
+            src="assets/logo.png"
             alt="Mallak Logo"
             className="h-10 sm:h-12 mb-4 sm:mb-6"
           />

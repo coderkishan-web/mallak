@@ -63,7 +63,7 @@ const Home = () => {
       <div className="relative bg-gray-100 text-gray-900 px-6 md:px-20 overflow-hidden">
        
         <img
-          src="src/assets/imgs/molecule.png"
+          src="assets/imgs/molecule.png"
           alt="Molecule Design"
           className="absolute top-0 right-0 w-32 md:w-80 opacity-40"
           style={{ transform: `rotate(${scrollY * 0.2}deg)` }}
@@ -75,12 +75,12 @@ const Home = () => {
           <div className="relative w-full md:w-1/2 flex justify-center">
             <div className="relative w-[300px] sm:w-[350px] md:w-[500px] h-[300px] sm:h-[350px] md:h-[400px]" data-aos="fade-up">
               <img
-                src="src/assets/imgs/3.jpg"
+                src="assets/imgs/3.jpg"
                 alt="Product Image"
                 className="absolute rounded-2xl -top-8 sm:-top-10 -right-8 sm:-right-10 z-10 w-3/4 shadow-2xl transition-transform transform hover:scale-105 duration-500"
               />
               <img
-                src="src/assets/imgs/15.jpg"
+                src="assets/imgs/15.jpg"
                 alt="Product Image"
                 className="absolute rounded-2xl -bottom-8 sm:-bottom-10 -left-8 sm:-left-10 w-3/4 bg-[#f3bc88] shadow-2xl transition-transform transform hover:scale-105 duration-500"
               />
@@ -106,19 +106,19 @@ const Home = () => {
             {/* Icon Section */}
             <div className="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-6 text-center -ml-6">
               <div className="transition-transform transform hover:scale-110">
-                <img src="src/assets/imgs/expertise.png" alt="Decades of Expertise" className="mx-auto w-10 sm:w-12" />
+                <img src="assets/imgs/expertise.png" alt="Decades of Expertise" className="mx-auto w-10 sm:w-12" />
                 <p className="mt-2 text-xs sm:text-sm font-semibold">Decades Of<br />Expertise</p>
               </div>
               <div className="transition-transform transform hover:scale-110">
-                <img src="src/assets/imgs/global-reach.png" alt="Global Reach" className="mx-auto w-10 sm:w-12" />
+                <img src="assets/imgs/global-reach.png" alt="Global Reach" className="mx-auto w-10 sm:w-12" />
                 <p className="mt-2 text-xs sm:text-sm font-semibold">Global<br />Reach</p>
               </div>
               <div className="transition-transform transform hover:scale-110">
-                <img src="src/assets/imgs/quality.png" alt="Uncompromising Quality" className="mx-auto w-10 sm:w-12" />
+                <img src="assets/imgs/quality.png" alt="Uncompromising Quality" className="mx-auto w-10 sm:w-12" />
                 <p className="mt-2 text-xs sm:text-sm font-semibold">Uncompromising<br />Quality</p>
               </div>
               <div className="transition-transform transform hover:scale-110">
-                <img src="src/assets/imgs/customizable.png" alt="Customized Solutions" className="mx-auto w-10 sm:w-12" />
+                <img src="assets/imgs/customizable.png" alt="Customized Solutions" className="mx-auto w-10 sm:w-12" />
                 <p className="mt-2 text-xs sm:text-sm font-semibold">Customized<br />Solutions</p>
               </div>
             </div>
@@ -126,7 +126,7 @@ const Home = () => {
         </section>
       </div>
     </section>
-      <section className="relative w-full bg-[url('src/assets/imgs/9.avif')] bg-cover bg-fixed py-20 px-8 md:px-20 text-[#120E37] flex justify-center items-center">
+      <section className="relative w-full bg-[url('assets/imgs/9.avif')] bg-cover bg-fixed py-20 px-8 md:px-20 text-[#120E37] flex justify-center items-center">
       <div className="relative w-full max-w-6xl text-center">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 bg-white/30 backdrop-blur-xl p-8 rounded-2xl">
           {[15, 150, 50, 5].map((value, index) => (
@@ -185,7 +185,7 @@ const Home = () => {
         {/* Image Section */}
         <div className="h-full md:w-1/2 flex justify-center" data-aos="fade-left">
           <img
-            src="src/assets/imgs/makeinindia.jpg"
+            src="assets/imgs/makeinindia.jpg"
             alt="Late Avsharan Singh Khurana"
             className="w-full h-auto max-w-[300px] sm:max-w-[400px] md:max-w-[500px] transition-transform transform hover:scale-105 duration-500"
           />
@@ -207,7 +207,7 @@ const Home = () => {
         Mallak Chemicals exports high-quality specialty chemicals worldwide, serving diverse industries such as pharmaceuticals, coatings, plastics, and textiles.
       </p>
       <img
-        src="src/assets/imgs/worldmap.png"
+        src="assets/imgs/worldmap.png"
         alt="World map"
         className="w-[70%] mt-2"
         data-aos="fade-up"

@@ -50,32 +50,32 @@ const OurClientele = () => {
             {/* Logo Group 1 */}
             <div className="flex-shrink-0 flex space-x-12 items-center">
               <img
-                src="src/assets/client/logosilde1.jpg"
+                src="assets/client/logosilde1.jpg"
                 alt="Client Logo"
                 className="h-12 w-auto transition-all duration-300"
               />
               <img
-                src="src/assets/client/logosilde2.jpg"
+                src="assets/client/logosilde2.jpg"
                 alt="Client Logo"
                 className="h-12 w-auto transition-all duration-300"
               />
               <img
-                src="src/assets/client/logosilde3.jpg"
+                src="assets/client/logosilde3.jpg"
                 alt="Client Logo"
                 className="h-12 w-auto transition-all duration-300"
               />
               <img
-                src="src/assets/client/logosilde4.png"
+                src="assets/client/logosilde4.png"
                 alt="Client Logo"
                 className="h-12 w-auto transition-all duration-300"
               />
               <img
-                src="src/assets/client/logosilde5.png"
+                src="assets/client/logosilde5.png"
                 alt="Client Logo"
                 className="h-12 w-auto transition-all duration-300"
               />
               <img
-                src="src/assets/client/logosilde6.jpg"
+                src="assets/client/logosilde6.jpg"
                 alt="Client Logo"
                 className="h-12 w-auto transition-all duration-300"
               />
@@ -84,32 +84,32 @@ const OurClientele = () => {
             {/* Logo Group 2 (Duplicate for seamless loop) */}
             <div className="flex-shrink-0 flex space-x-12 items-center">
               <img
-                src="src/assets/client/logosilde7.jpg"
+                src="assets/client/logosilde7.jpg"
                 alt="Client Logo"
                 className="h-12 w-auto transition-all duration-300"
               />
               <img
-                src="src/assets/client/logosilde8.jpg"
+                src="assets/client/logosilde8.jpg"
                 alt="Client Logo"
                 className="h-12 w-auto transition-all duration-300"
               />
               <img
-                src="src/assets/client/logosilde9.png"
+                src="assets/client/logosilde9.png"
                 alt="Client Logo"
                 className="h-12 w-auto transition-all duration-300"
               />
               <img
-                src="src/assets/client/logosilde10.png"
+                src="assets/client/logosilde10.png"
                 alt="Client Logo"
                 className="h-12 w-auto transition-all duration-300"
               />
               <img
-                src="src/assets/client/logosilde1.jpg"
+                src="assets/client/logosilde1.jpg"
                 alt="Client Logo"
                 className="h-12 w-auto transition-all duration-300"
               />
               <img
-                src="src/assets/client/logosilde2.jpg"
+                src="assets/client/logosilde2.jpg"
                 alt="Client Logo"
                 className="h-12 w-auto transition-all duration-300"
               />
@@ -118,32 +118,32 @@ const OurClientele = () => {
             {/* Logo Group 3 (Duplicate for seamless loop) */}
             <div className="flex-shrink-0 flex space-x-12 items-center">
               <img
-                src="src/assets/client/logosilde3.jpg"
+                src="assets/client/logosilde3.jpg"
                 alt="Client Logo"
                 className="h-12 w-auto transition-all duration-300"
               />
               <img
-                src="src/assets/client/logosilde4.png"
+                src="assets/client/logosilde4.png"
                 alt="Client Logo"
                 className="h-12 w-auto transition-all duration-300"
               />
               <img
-                src="src/assets/client/logosilde5.png"
+                src="assets/client/logosilde5.png"
                 alt="Client Logo"
                 className="h-12 w-auto transition-all duration-300"
               />
               <img
-                src="src/assets/client/logosilde6.jpg"
+                src="assets/client/logosilde6.jpg"
                 alt="Client Logo"
                 className="h-12 w-auto transition-all duration-300"
               />
               <img
-                src="src/assets/client/logosilde7.jpg"
+                src="assets/client/logosilde7.jpg"
                 alt="Client Logo"
                 className="h-12 w-auto transition-all duration-300"
               />
               <img
-                src="src/assets/client/logosilde8.jpg"
+                src="assets/client/logosilde8.jpg"
                 alt="Client Logo"
                 className="h-12 w-auto transition-all duration-300"
               />

@@ -4,19 +4,19 @@ const slides = [
   {
     title: "Global Leader in Specialty Chemicals",
     description: "Trusted by businesses in pharmaceuticals, coatings, plastics, and more.",
-    image: "src/assets/imgs/5.jpg",
+    image: "assets/imgs/5.jpg",
     textColor: "text-[#FEEAF3]"
   },
   {
     title: "Sustainable & Advanced Chemistry",
     description: "Powering industries worldwide with high-quality, eco-friendly, and innovative chemical solutions.",
-    image: "src/assets/imgs/4.jpg",
+    image: "assets/imgs/4.jpg",
     textColor: "text-[#E6F1D9]"
   },
   {
     title: "High-Performance Pigments & Surfactants",
     description: "Our products meet international quality standards and are trusted by industries worldwide.",
-    image: "src/assets/imgs/8.jpg",
+    image: "assets/imgs/8.jpg",
     textColor: "text-[#E1DCEE]"
   }
 ];

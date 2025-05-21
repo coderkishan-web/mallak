@@ -10,11 +10,11 @@ import {
 const Footer = () => {
   return (
     <footer className="bg-gradient-to-r from-black to-[#12073b] text-white px-6 md:px-12 lg:px-20 py-12 rounded-t-[60px]">
-      <div className="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div className="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
         {/* Logo and Description */}
-        <div>
+        <div className="md:max-w-[400px]">
           <div className="flex items-center gap-2 mb-10">
-            <img src="/src/assets/logo.png" alt="" className='w-72'/>
+            <img src="assets/logo.png" alt="" className='w-72'/>
             
           </div>
           <p className="text-sm leading-relaxed">
@@ -30,7 +30,8 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Our Organisation */}
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-10">
+          {/* Our Organisation */}
         <div>
           <h3 className="text-[#00b7ff] font-semibold mb-4">Our Organisation</h3>
           <ul className="space-y-2 text-sm">
@@ -62,6 +63,7 @@ const Footer = () => {
             <li>Lorem Ipsum</li>
           </ul>
         </div>
+      </div>
       </div>
 
       {/* Bottom Section */}

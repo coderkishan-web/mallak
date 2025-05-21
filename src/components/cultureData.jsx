@@ -21,7 +21,7 @@ const CompanyCulture = () => {
 
         {/* Image 1 (2-row height) */}
         <div className="lg:row-span-2 rounded-xl overflow-hidden">
-          <img src="src/assets/Frame 66.png" alt="Team working" className="w-full h-full object-cover" />
+          <img src="assets/Frame 66.png" alt="Team working" className="w-full h-full object-cover" />
         </div>
 
         {/* Box 2 */}
@@ -51,7 +51,7 @@ const CompanyCulture = () => {
 
         {/* Image 2 */}
         <div className="rounded-xl overflow-hidden">
-          <img src='src/assets/Frame 63.png' alt="Discussion" className="w-full h-full object-cover" />
+          <img src='assets/Frame 63.png' alt="Discussion" className="w-full h-full object-cover" />
         </div>
       </div>
     </section>

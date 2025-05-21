@@ -5,7 +5,7 @@ const industries = [
     title: "Coatings & Paints",
     description:
       "Enhancing durability, color vibrancy, and performance with advanced pigments and additives for industrial and decorative coatings.",
-    img: "src/assets/imgs/16.avif",
+    img: "assets/imgs/16.avif",
     bg: "bg-[#F8D3DE]/30",
     delay: 0,
     imgClass: "object-cover",
@@ -14,7 +14,7 @@ const industries = [
     title: "Pharmaceuticals & Healthcare",
     description:
       "Delivering high-purity chemical intermediates for pharmaceutical formulations and healthcare applications.",
-    img: "src/assets/imgs/22.avif",
+    img: "assets/imgs/22.avif",
     bg: "bg-[#F9E383]/10",
     delay: 200,
     imgClass: "object-cover",
@@ -23,7 +23,7 @@ const industries = [
     title: "Plastic & Masterbatches",
     description:
       "Providing high-quality colorants and stabilizers for superior plastic manufacturing and enhanced product longevity.",
-    img: "src/assets/imgs/5.jpg",
+    img: "assets/imgs/5.jpg",
     bg: "bg-[#DEEBF9]/30",
     delay: 400,
     imgClass: "object-contain",
@@ -32,7 +32,7 @@ const industries = [
     title: "Printing Inks & Graphic Arts",
     description:
       "Developing high-performance pigments and dispersions for vibrant and long-lasting printing inks.",
-    img: "src/assets/imgs/23.webp",
+    img: "assets/imgs/23.webp",
     bg: "bg-[#E7F4D4]/30",
     delay: 600,
     imgClass: "object-contain",
@@ -41,7 +41,7 @@ const industries = [
     title: "Detergents & Surfactants",
     description:
       "Formulating eco-friendly surfactants and emulsifiers for superior cleaning, foaming, and wetting properties.",
-    img: "src/assets/imgs/10.jpg",
+    img: "assets/imgs/10.jpg",
     bg: "bg-[#CCB9D9]/30",
     delay: 800,
     imgClass: "object-cover",
@@ -50,7 +50,7 @@ const industries = [
     title: "Textile & Leather",
     description:
       "Enhancing fabric and leather processing with specialty chemicals for dyeing, finishing, and treatment.",
-    img: "src/assets/imgs/19.webp",
+    img: "assets/imgs/19.webp",
     bg: "bg-[#E8A8A6]/10",
     delay: 1000,
     imgClass: "object-contain",
@@ -66,12 +66,12 @@ const IndustriesWeServe = () => {
     >
       {/* Background Molecules */}
       <img
-        src="src/assets/imgs/molecule3.png"
+        src="assets/imgs/molecule3.png"
         alt="Molecule Design"
         className="absolute top-[50%] right-0 w-32 md:w-72 opacity-20 pointer-events-none"
       />
       <img
-        src="src/assets/imgs/molecule6.png"
+        src="assets/imgs/molecule6.png"
         alt="Molecule Design"
         className="absolute bottom-[50%] left-0 w-32 md:w-60 opacity-20 pointer-events-none"
       />
